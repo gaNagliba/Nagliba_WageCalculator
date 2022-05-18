@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3D5A9"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/CALCULATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="56dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/HOURS"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/HOURS"
+        app:layout_constraintTop_toBottomOf="@+id/HOURS" />
+
+    <EditText
+        android:id="@+id/HOURS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:hint="Whole Number"
+        android:inputType="number"
+        android:text="Type Here"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/CALCULATE"
+        app:layout_constraintEnd_toEndOf="@+id/employee.name"
+        app:layout_constraintStart_toStartOf="@+id/employee.name"
+        app:layout_constraintTop_toBottomOf="@+id/employee.name" />
+
+    <TextView
+        android:id="@+id/employee.name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Hours worked"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/HOURS"
+        app:layout_constraintEnd_toEndOf="@+id/RG"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/RG"
+        app:layout_constraintTop_toBottomOf="@+id/RG" />
+
+    <RadioGroup
+        android:id="@+id/RG"
+        android:layout_width="192dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/employee.name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeetype">
+
+        <RadioButton
+            android:id="@+id/radio_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Regular Employee"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="350dp" />
+
+        <RadioButton
+            android:id="@+id/radio_PartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Part-Time Worker"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="395dp" />
+
+        <RadioButton
+            android:id="@+id/radio_probationary"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:fontFamily="sans-serif"
+            android:minHeight="48dp"
+            android:text="Probationary Employee"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="395dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/employeetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Employee Type"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/RG"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/employeetype"
+        app:layout_constraintEnd_toEndOf="@+id/NAME"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="@+id/NAME"
+        app:layout_constraintTop_toBottomOf="@+id/NAME" />
+
+    <TextView
+        android:id="@+id/TotalHoursOvertimeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Wage Calculator"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/NAME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Employee Name"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@+id/TotalHoursOvertimeNumber"
+        app:layout_constraintStart_toStartOf="@+id/TotalHoursOvertimeNumber"
+        app:layout_constraintTop_toBottomOf="@+id/TotalHoursOvertimeNumber"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
